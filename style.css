@@ -81,3 +81,28 @@ button:hover {
     color: #b33;
     letter-spacing: 3px;
 }
+
+/* スマホ用 */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 19px;
+    }
+
+    #result {
+        font-size: 24px;
+    }
+}
