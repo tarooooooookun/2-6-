@@ -1,0 +1,86 @@
+```css
+/* 全体 */
+body {
+    background-color: #08090d;
+    color: #d8d8d8;
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 60px 20px;
+}
+
+/* タイトル */
+h1 {
+    color: #eeeeee;
+    font-size: 42px;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    margin-bottom: 50px;
+}
+
+/* 説明文 */
+p {
+    color: #999;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+/* 入力欄 */
+input {
+    width: 300px;
+    padding: 14px;
+    margin-top: 20px;
+
+    background-color: #11131a;
+    color: #eeeeee;
+
+    border: 1px solid #555;
+    border-radius: 2px;
+
+    font-size: 18px;
+    text-align: center;
+
+    outline: none;
+}
+
+/* 入力欄を選択したとき */
+input:focus {
+    border-color: #9b1c1c;
+    box-shadow: 0 0 10px rgba(155, 28, 28, 0.4);
+}
+
+/* 回答ボタン */
+button {
+    display: block;
+
+    margin: 20px auto;
+    padding: 12px 35px;
+
+    background-color: #171a22;
+    color: #eeeeee;
+
+    border: 1px solid #777;
+    border-radius: 2px;
+
+    font-size: 16px;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ボタンにカーソルを合わせたとき */
+button:hover {
+    background-color: #8b1515;
+    border-color: #c33;
+    box-shadow: 0 0 15px rgba(180, 0, 0, 0.5);
+}
+
+/* 結果表示 */
+#result {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #b33;
+    letter-spacing: 3px;
+}
+```
