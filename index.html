@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>”爆弾解除暗号”</title>
     <meta charset="UTF-8">
+    <title>爆弾解除</title>
+</head>
+
 <body>
-    <h1>爆弾解除暗号回答</h1>
-    <p>日本の運命はあなたにかかっている。</p>
-    <h2>暗号の答えは↓</h2>
+    <h1>回答を入力せよ</h1>
+
+    <p>答えを入力してください。</p>
+
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">回答する</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value;
+
+            if (answer === "タゴサク") {
+                document.getElementById("result").textContent = "正解！";
+            } else {
+                document.getElementById("result").textContent = "不正解……";
+            }
+        }
+    </script>
 </body>
 </html>
