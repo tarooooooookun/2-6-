@@ -20,23 +20,15 @@
     <img id="bombGif" src="images/bomb.gif" alt="演出" style="display: none;">
 
     <script>
-        function checkAnswer() {
-            const answer = document.getElementById("answer").value;
-            const bombGif = document.getElementById("bombGif");
+    function checkAnswer() {
+        const answer = document.getElementById("answer").value;
 
-            if (answer === "タゴサク") {
-                document.getElementById("result").textContent = "正解！";
-
-                // GIFを隠す
-                bombGif.style.display = "none";
-
-            } else {
-                document.getElementById("result").textContent = "不正解……";
-
-                // GIFを表示
-                bombGif.style.display = "block";
-            }
+        if (answer === "タゴサク") {
+            document.getElementById("result").textContent = "正解！";
+        } else {
+            window.location.href = "wrong.html";
         }
-    </script>
+    }
+</script>
 </body>
 </html>
