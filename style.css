@@ -83,7 +83,8 @@ button:hover {
 }
 
 #countdownGif,
-#explosionGif {
+#explosionGif,
+#achieveImage{
     width: 400px;
     max-width: 90%;
     margin: 30px auto;
