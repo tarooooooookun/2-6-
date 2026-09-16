@@ -82,8 +82,8 @@ button:hover {
     letter-spacing: 3px;
 }
 
-#bombGif {
-    display: block;
+#countdownGif,
+#explosionGif {
     width: 400px;
     max-width: 90%;
     margin: 30px auto;
