@@ -10,7 +10,7 @@ body {
 /* タイトル */
 h1 {
     color: #eeeeee;
-    font-size: 42px;
+    font-size: 60px;
     letter-spacing: 8px;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
     margin-bottom: 50px;
@@ -19,14 +19,14 @@ h1 {
 /* 説明文 */
 p {
     color: #999;
-    font-size: 16px;
+    font-size: 25px;
     letter-spacing: 2px;
 }
 
 /* 入力欄 */
 input {
     width: 300px;
-    padding: 14px;
+    padding: 25px;
     margin-top: 20px;
 
     background-color: #11131a;
@@ -51,7 +51,7 @@ input:focus {
 button {
     display: block;
 
-    margin: 20px auto;
+    margin: 25px auto;
     padding: 12px 35px;
 
     background-color: #171a22;
