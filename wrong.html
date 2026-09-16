@@ -10,34 +10,24 @@
 
     <h1>不正解……</h1>
 
-    <p id="countdown">10</p>
+    <!-- 10秒カウントダウン -->
+    <img id="countdownGif" src="images/countdown.gif" alt="カウントダウン">
 
-    <!-- 最初は非表示 -->
-    <img id="bombGif" src="images/bomb.gif" alt="爆発演出">
+    <!-- 爆発GIF -->
+    <img id="explosionGif" src="images/explosion.gif" alt="爆発演出">
 
     <script>
-        let time = 10;
+        const countdownGif = document.getElementById("countdownGif");
+        const explosionGif = document.getElementById("explosionGif");
 
-        const countdown = document.getElementById("countdown");
-        const bombGif = document.getElementById("bombGif");
+        // 最初は爆発GIFを隠す
+        explosionGif.style.display = "none";
 
-        // 最初はGIFを隠す
-        bombGif.style.display = "none";
-
-        const timer = setInterval(function() {
-            time--;
-
-            countdown.textContent = time;
-
-            if (time <= 0) {
-                clearInterval(timer);
-
-                countdown.textContent = "爆発";
-
-                // 10秒後にGIFを表示
-                bombGif.style.display = "block";
-            }
-        }, 1000);
+        // 10秒後
+        setTimeout(function() {
+            countdownGif.style.display = "none";
+            explosionGif.style.display = "block";
+        }, 10000);
     </script>
 
 </body>
