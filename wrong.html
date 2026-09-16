@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>不正解</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <h1>不正解……</h1>
+
+    <p id="countdown">10</p>
+
+    <!-- 最初は非表示 -->
+    <img id="bombGif" src="images/bomb.gif" alt="爆発演出">
+
+    <script>
+        let time = 10;
+
+        const countdown = document.getElementById("countdown");
+        const bombGif = document.getElementById("bombGif");
+
+        // 最初はGIFを隠す
+        bombGif.style.display = "none";
+
+        const timer = setInterval(function() {
+            time--;
+
+            countdown.textContent = time;
+
+            if (time <= 0) {
+                clearInterval(timer);
+
+                countdown.textContent = "爆発";
+
+                // 10秒後にGIFを表示
+                bombGif.style.display = "block";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
