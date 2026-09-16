@@ -13,23 +13,23 @@
     <!-- 10秒カウントダウン -->
     <img id="countdownGif" src="images/countdown.gif" alt="カウントダウン">
 
-    <!-- 爆発GIF -->
-    <img id="explosionGif" src="images/explosion.gif" alt="爆発演出">
+    <!-- 正解PNG -->
+    <img id="achieveImage" src="images/achieve.png" alt="正解">
 
     <script>
         const countdownGif = document.getElementById("countdownGif");
-        const achiveGif = document.getElementById("explosionGif");
+        const achieveImage = document.getElementById("achieveImage");
 
-        // 最初は爆発GIFを隠す
-        achiveGif.style.display = "none";
+        // 最初は正解画像を隠す
+        achieveImage.style.display = "none";
 
-        // 10秒後に爆発GIFへ
+        // 10秒後に正解画像を表示
         setTimeout(function() {
 
             countdownGif.style.display = "none";
-            achive.style.display = "block";
+            achieveImage.style.display = "block";
 
-            // 爆発GIFが3秒終わったら元のページへ
+            // 5秒後に元のページへ
             setTimeout(function() {
                 window.location.href = "index.html";
             }, 5000);
