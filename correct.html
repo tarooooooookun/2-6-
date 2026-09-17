@@ -2,55 +2,48 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>正解</title>
+    <title>ボタンを押せ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>...</h1>
+    <h1>画面を押してくれ</h1>
 
     <!-- 10秒カウントダウン -->
     <img id="countdownGif" src="images/countdown.gif" alt="カウントダウン">
 
-    <!-- 正解PNG -->
-    <img id="achieveImage" src="images/achieve.png" alt="正解">
+    <!-- 成功　-->
+    <img id="achievePic" src="images/achieve.png" alt="成功演出">
 
     <script>
-        const countdownGif = document.getElementById("countdownGif");
-        const achieveImage = document.getElementById("achieveImage");
-        
-        const clearSound = new Audio("sounds/clear.mp3");
+    const countdownGif = document.getElementById("countdownGif");
+    const achievePic = document.getElementById("achievePic");
 
-        // 最初は正解画像を隠す
-        achieveImage.style.display = "none";
-        
-        clearSound.load();
+    const countdownSound = new Audio("sounds/tiktak.mp3");
+    const clearSound = new Audio("sounds/clear.mp3");
 
-        
+    achievePic.style.display = "none";
+    countdownGif.style.display = "none";
 
-        // 10秒後に正解画像を表示
+    // 画面を押したらカウントダウン開始
+    document.addEventListener("click", function() {
+        countdownGif.style.display = "block";
+        countdownSound.volume = 1.0;
+        countdownSound.play();
+
+        // 10秒後に爆発
         setTimeout(function() {
 
             countdownGif.style.display = "none";
-            achieveImage.style.display = "block";
+            achievePic.style.display = "block";
 
-               // カウントダウン音を停止
             countdownSound.pause();
 
-        // 爆発音を再生
+            clearSound.volume = 1.0;
             clearSound.play();
 
-            
+        }, 9900);
 
-            // 5秒後に元のページへ
-            setTimeout(function() {
-                window.location.href = "index.html";
-            }, 15000);
-
-        }, 9000);
-    </script>
-
-</body>
-</html>
-
+    }, { once: true });
+</script>
