@@ -26,7 +26,13 @@
 
         // 最初は爆発GIFを隠す
         explosionGif.style.display = "none";
-        countdownSound.play();
+        countdownSound.load();
+        explosionSound.load();
+
+        // ページを開いた瞬間に再生
+        countdownSound.play().catch(function(error) {
+            console.log("音声を再生できませんでした:", error);
+        });
 
         // 10秒後に爆発GIFへ
         setTimeout(function() {
