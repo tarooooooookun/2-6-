@@ -19,15 +19,26 @@
     <script>
         const countdownGif = document.getElementById("countdownGif");
         const explosionGif = document.getElementById("explosionGif");
+        const countdownSound = new Audio("sounds/tiktak.mp3");
+        const explosionSound = new Audio("sounds/explosion.mp3");
+
+
 
         // 最初は爆発GIFを隠す
         explosionGif.style.display = "none";
+        countdownSound.play();
 
         // 10秒後に爆発GIFへ
         setTimeout(function() {
 
             countdownGif.style.display = "none";
             explosionGif.style.display = "block";
+
+            // カウントダウン音を停止
+            countdownSound.pause();
+
+        // 爆発音を再生
+            explosionSound.play();
 
             // 爆発GIFが3秒終わったら元のページへ
             setTimeout(function() {
