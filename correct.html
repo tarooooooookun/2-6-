@@ -19,6 +19,8 @@
     <script>
         const countdownGif = document.getElementById("countdownGif");
         const achieveImage = document.getElementById("achieveImage");
+        const countdownSound = new Audio("sounds/clear.mp3");
+        const explosionSound = new Audio("sounds/explosion.mp3");
 
         // 最初は正解画像を隠す
         achieveImage.style.display = "none";
@@ -28,6 +30,8 @@
 
             countdownGif.style.display = "none";
             achieveImage.style.display = "block";
+
+            
 
             // 5秒後に元のページへ
             setTimeout(function() {
