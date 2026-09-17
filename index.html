@@ -20,12 +20,15 @@
     <img id="bombGif" src="images/bomb.gif" alt="演出" style="display: none;">
 
     <script>
+    const countdownSound = new Audio("sounds/tiktak.mp3");
     function checkAnswer() {
         const answer = document.getElementById("answer").value;
 
         if (answer === "タゴサク") {
+            countdownSound.play();
             window.location.href = "correct.html";
         } else {
+            countdownSound.play();
             window.location.href = "wrong.html";
         }
     }
