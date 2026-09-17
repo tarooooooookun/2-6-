@@ -17,6 +17,7 @@
     <img id="explosionGif" src="images/explosion.gif" alt="爆発演出">
 
     <script>
+    const title = document.querySelector("h1");
     const countdownGif = document.getElementById("countdownGif");
     const explosionGif = document.getElementById("explosionGif");
 
@@ -28,6 +29,7 @@
 
     // 画面を押したらカウントダウン開始
     document.addEventListener("click", function() {
+        title.style.display = "none";
         countdownGif.style.display = "block";
         countdownSound.volume = 1.0;
         countdownSound.play();
