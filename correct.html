@@ -19,8 +19,8 @@
     <script>
         const countdownGif = document.getElementById("countdownGif");
         const achieveImage = document.getElementById("achieveImage");
-        const countdownSound = new Audio("sounds/clear.mp3");
-        const explosionSound = new Audio("sounds/explosion.mp3");
+        const countdownSound = new Audio("sounds/tiktak.mp3");
+        const clearSound = new Audio("sounds/clear.mp3");
 
         // 最初は正解画像を隠す
         achieveImage.style.display = "none";
@@ -30,6 +30,12 @@
 
             countdownGif.style.display = "none";
             achieveImage.style.display = "block";
+
+               // カウントダウン音を停止
+            countdownSound.pause();
+
+        // 爆発音を再生
+            clearSound.play();
 
             
 
