@@ -17,38 +17,33 @@
     <img id="explosionGif" src="images/explosion.gif" alt="爆発演出">
 
     <script>
-        const countdownGif = document.getElementById("countdownGif");
-        const explosionGif = document.getElementById("explosionGif");
-        
-        const explosionSound = new Audio("sounds/explosion.mp3");
+    const countdownGif = document.getElementById("countdownGif");
+    const explosionGif = document.getElementById("explosionGif");
 
+    const countdownSound = new Audio("sounds/tiktak.mp3");
+    const explosionSound = new Audio("sounds/explosion.mp3");
 
+    explosionGif.style.display = "none";
+    countdownGif.style.display = "none";
 
-        // 最初は爆発GIFを隠す
-        explosionGif.style.display = "none";
-        
-        explosionSound.load();
+    // 画面を押したらカウントダウン開始
+    document.addEventListener("click", function() {
+        explosionGif.style.display = "block";
+        countdownSound.volume = 1.0;
+        countdownSound.play();
 
-        
-        // 10秒後に爆発GIFへ
+        // 10秒後に爆発
         setTimeout(function() {
 
             countdownGif.style.display = "none";
             explosionGif.style.display = "block";
 
-            // カウントダウン音を停止
             countdownSound.pause();
 
-        // 爆発音を再生
+            explosionSound.volume = 1.0;
             explosionSound.play();
 
-            // 爆発GIFが3秒終わったら元のページへ
-            setTimeout(function() {
-                window.location.href = "index.html";
-            }, 15000);
-
         }, 10000);
-    </script>
 
-</body>
-</html>
+    }, { once: true });
+</script>
