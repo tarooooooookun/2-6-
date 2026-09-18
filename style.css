@@ -47,6 +47,11 @@ input:focus {
     box-shadow: 0 0 10px rgba(155, 28, 28, 0.4);
 }
 
+#nextButton {
+    display: none;
+}
+
+
 /* 回答ボタン */
 button {
     display: block;
