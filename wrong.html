@@ -9,6 +9,9 @@
 <body>
 
     <h1>ボタンを押してくれ</h1>
+    <button id="nextButton" onclick="window.location.href='next.html'">
+    次へ進む
+　　　</button>
 　　 <img id="buttonPic" src="images/button.png" alt="ボタン">
     <!-- 10秒カウントダウン -->
     <img id="countdownGif" src="images/countdown.gif" alt="カウントダウン">
@@ -46,13 +49,15 @@
 
             explosionSound.volume = 1.0;
             explosionSound.play();
+// 爆発音が始まってから5秒後にボタンを表示
+　　　　 setTimeout(function() {
+    　　document.getElementById("nextButton").style.display = "block";
+}, 5000);
 
         }, 9900);
 
     }, { once: true });
 
-   <button onclick="window.location.href='next.html'">
-    次へ進む
-   </button>
+
 
 </script>
