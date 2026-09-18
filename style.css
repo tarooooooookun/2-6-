@@ -97,6 +97,23 @@ button:hover {
 
 #nextButton {
     display: none;
+
+    /* 文字 */
+    font-size: 30px;
+    letter-spacing: 4px;
+
+    /* ボタンの大きさ */
+    padding: 15px 45px;
+
+    /* 位置 */
+    margin: 40px auto 0 auto;
+
+    /* 見た目 */
+    background-color: #171a22;
+    color: #eeeeee;
+    border: 1px solid #777;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 /* スマホ用 */
