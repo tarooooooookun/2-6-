@@ -95,6 +95,10 @@ button:hover {
     margin: 30px auto;
 }
 
+#nextButton {
+    display: none;
+}
+
 /* スマホ用 */
 @media (max-width: 600px) {
 
