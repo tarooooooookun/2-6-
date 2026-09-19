@@ -24,7 +24,14 @@
     function checkAnswer() {
         const answer = document.getElementById("answer").value;
 
-        if (answer === "タゴサク") {
+        if (answer === "タゴサク" ||
+            answer === "１３９５" ||
+            answer === "３３７５" ||
+            answer === "６４３５" ||
+            answer === "３８３８" ||
+            answer === "５２５２" ||
+            answer === "７８７８"
+           ) {
             countdownSound.play();
             window.location.href = "correct.html";
         } else {
