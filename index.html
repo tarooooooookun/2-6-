@@ -24,13 +24,18 @@
     function checkAnswer() {
         const answer = document.getElementById("answer").value;
 
-        if (answer === "タゴサク" ||
-            answer === "１３９５" ||
-            answer === "３３７５" ||
+        if (answer === "テスト" ||
+            answer === "３７５０" ||
             answer === "６４３５" ||
+            answer === "１３９５" ||
             answer === "３８３８" ||
             answer === "５２５２" ||
-            answer === "７８７８"
+　　　　　　　　answer === "７８７８" ||
+            answer === "タロサク" ||
+            answer === "バクダン" ||
+            answer === "爆弾" ||
+            answer === "犯人" ||
+            answer === "ハンニン" 
            ) {
             countdownSound.play();
             window.location.href = "correct.html";
